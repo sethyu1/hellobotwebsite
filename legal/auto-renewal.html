@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#0B1020" />
+<title>自动续费规则 · HelloBot</title>
+<meta name="description" content="HelloBot — 自动续费规则" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Noto+Serif+SC:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles/system.css" />
+<style>
+  html, body { background: var(--bg-1); margin: 0; }
+  body { color: var(--ink-0); min-height: 100vh; }
+
+  .legal-top {
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(11,16,32,.85);
+    backdrop-filter: saturate(150%) blur(10px);
+    -webkit-backdrop-filter: saturate(150%) blur(10px);
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .legal-top-inner {
+    max-width: 880px; margin: 0 auto;
+    padding: 14px 24px;
+    display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  }
+  .legal-top a.brand {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-weight: 700; font-size: 16px; color: var(--ink-0);
+  }
+  .legal-top a.brand .dot {
+    width: 8px; height: 8px; border-radius: 50%; background: var(--brand);
+    display: inline-block;
+  }
+  .legal-top a.back {
+    color: var(--ink-2); font-size: 13px;
+    font-family: var(--font-mono); letter-spacing: .08em;
+  }
+  .legal-top a.back:hover { color: var(--brand); }
+
+  .legal-wrap {
+    max-width: 720px; margin: 0 auto;
+    padding: 56px 24px 96px;
+  }
+  .legal-wrap .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 11px; letter-spacing: .22em; text-transform: uppercase;
+    color: var(--ink-3);
+    margin-bottom: 14px;
+  }
+  .legal-wrap h1.doc-title {
+    font-size: 32px; line-height: 1.2; margin: 0 0 32px 0;
+    letter-spacing: -.01em; font-weight: 700;
+  }
+
+  /* Body content emitted by mammoth */
+  .legal-body {
+    color: var(--ink-1);
+    font-size: 15px; line-height: 1.85;
+  }
+  .legal-body p { margin: 0 0 14px 0; }
+  .legal-body strong { color: var(--ink-0); font-weight: 600; }
+  .legal-body em { color: var(--ink-0); }
+  .legal-body a { color: var(--brand); text-decoration: underline; text-underline-offset: 3px; }
+  .legal-body a:hover { color: var(--brand-hot); }
+
+  /* Mammoth maps Word's Heading 1/2/3 to <h1>/<h2>/<h3>. The first <p> is the
+     title block of the source doc; we leave it inline. */
+  .legal-body h1 {
+    font-size: 20px; line-height: 1.4; font-weight: 700;
+    color: var(--ink-0);
+    margin: 36px 0 14px 0;
+    letter-spacing: -.005em;
+  }
+  .legal-body h2 {
+    font-size: 17px; line-height: 1.4; font-weight: 600;
+    color: var(--ink-0);
+    margin: 28px 0 10px 0;
+  }
+  .legal-body h3 {
+    font-size: 15px; line-height: 1.5; font-weight: 600;
+    color: var(--ink-0);
+    margin: 22px 0 8px 0;
+  }
+
+  .legal-body ul, .legal-body ol {
+    padding-left: 22px; margin: 0 0 14px 0;
+  }
+  .legal-body li { margin: 0 0 6px 0; }
+
+  .legal-body table {
+    width: 100%; border-collapse: collapse;
+    margin: 16px 0; font-size: 13.5px;
+    border: 1px solid var(--line);
+    background: var(--bg-2);
+  }
+  .legal-body th, .legal-body td {
+    padding: 10px 12px;
+    border: 1px solid var(--line);
+    text-align: left; vertical-align: top;
+  }
+  .legal-body th { background: var(--bg-3); color: var(--ink-0); font-weight: 600; }
+  .legal-body td { color: var(--ink-1); }
+
+  .legal-foot {
+    max-width: 720px; margin: 0 auto;
+    padding: 24px 24px 64px;
+    border-top: 1px dashed var(--line-soft);
+    color: var(--ink-3); font-size: 12px;
+    font-family: var(--font-mono); letter-spacing: .04em;
+    display: flex; flex-wrap: wrap; gap: 8px 18px; justify-content: space-between;
+  }
+  .legal-foot a { color: var(--ink-3); }
+  .legal-foot a:hover { color: var(--brand); }
+
+  @media (max-width: 640px) {
+    .legal-wrap { padding: 40px 20px 72px; }
+    .legal-wrap h1.doc-title { font-size: 26px; }
+    .legal-body { font-size: 14.5px; }
+  }
+</style>
+</head>
+<body>
+<header class="legal-top">
+  <div class="legal-top-inner">
+    <a class="brand" href="../index.html"><span class="dot"></span> HelloBot</a>
+    <a class="back" href="../index.html">← 返回首页</a>
+  </div>
+</header>
+<main class="legal-wrap">
+  <div class="eyebrow">法律与政策</div>
+  <h1 class="doc-title">自动续费规则</h1>
+  <article class="legal-body">
+<p>深圳润泽千川科技有限公司<br />HelloBot / Bot招聘 自动续费规则</p><p>版本号：V1.0    更新日期：【2026年4月27日】    生效日期：【2026年4月27日】</p><p>重要提示：本规则适用于 HelloBot / Bot招聘提供的周服务、月服务或其他具有自动展期、自动续费、自动扣款属性的周期性数字化服务。您开通自动续费前，请重点阅读关于开通方式、扣款时间、扣款金额、价格变更、取消路径、退款限制和平台处置权的条款。</p><h1>适用范围与规则效力</h1><ol><li>本规则适用于由深圳润泽千川科技有限公司运营的 HelloBot / Bot招聘产品中，采用自动展期、自动续费或自动扣款方式提供的订阅型、周期型、连续包周、连续包月或其他连续性数字化服务。</li><li>本规则是《用户服务协议》的组成部分；如本规则与订单页、支付页、活动页、弹窗说明、会员权益说明就同一事项存在更具体约定的，在不违反法律法规强制性规定的前提下，以更具体的页面展示或说明为准。</li><li>本服务仅向年满十八周岁的用户提供。未满十八周岁的用户不得开通、购买或使用自动续费服务。</li></ol><h1>定义</h1><ol><li>“周期服务”指按周、按月或其他连续周期向您提供的数字化服务、订阅权益、虚拟角色雇佣周期、增值能力或其他连续性服务。</li><li>“自动续费服务”指在您明确授权的前提下，在当前服务周期届满前或届满时，通过您绑定的支付方式自动扣取下一周期费用，从而使服务周期自动延续的服务。</li><li>“支付渠道”指您选择并绑定的支付工具、应用内支付账户、银行卡或其他支付方式。</li></ol><h1>开通条件与明示同意</h1><ol><li>自动续费服务仅在您主动勾选、点击确认或以其他清晰、积极的方式作出授权时开通。平台不会以默认勾选、捆绑同意、误导点击或隐藏关键提示的方式替您开通自动续费。</li><li>您在开通前，应仔细确认服务名称、权益范围、首期价格、续费价格、计费周期、扣款时间、试用规则、优惠到期后的价格、取消路径及退款限制。</li><li>您确认并同意：一旦开通自动续费，平台将在您授权范围内，于每个服务周期届满前后按照本规则和页面展示通过支付渠道自动发起扣款。</li></ol><h1>扣款与提醒规则</h1><ol><li>平台将在法律法规要求的期限内，以站内信、弹窗、消息中心、短信、电子邮件、Push 通知或其他显著方式提醒您自动续费事项；通常情况下，提醒将不晚于自动续费日期前五日发出。</li><li>提醒内容通常包括：续费服务名称、下一周期价格、预计扣款时间、取消方式、适用支付渠道以及价格变化提示。具体提醒方式以您在产品内的通知设置和平台实际支持能力为准。</li><li>如您参加首期优惠、限时折扣、试用转正或其他价格优惠活动，平台有权在优惠期届满后，按照届时页面公示或已向您提示的标准价格进行续费。</li><li>若平台调整续费价格、权益范围、周期设置或自动续费规则，将在生效前以显著方式提示；法律法规要求取得您另行同意的，平台将重新征得您的同意。</li></ol><h1>扣款失败、服务中断与平台处置</h1><ol><li>如因余额不足、银行卡状态异常、支付渠道限制、风控拦截、网络故障、系统异常或其他非因平台故意或重大过失导致的原因造成扣款失败，平台不保证续费一定成功。</li><li>扣款失败后，平台有权视业务规则暂停、降级或终止相应周期服务；部分角色、权益、配置、雇佣周期、展示状态、优惠资格或历史连续订阅权益可能因此失效。</li><li>如平台已实际扣款但未向您提供对应服务，平台将依法依规核实并处理，包括补发权益、顺延周期或原路退款。</li></ol><h1>取消、变更与生效时间</h1><ol><li>您可按照产品内公示路径随时取消自动续费。取消操作通常在当前周期届满后生效；已扣取的当期费用一般不予退还，但法律法规另有规定、页面另有明确承诺或因平台原因导致的除外。</li><li>您取消自动续费后，当前已生效周期内的服务通常持续至该周期届满；届满后平台不再自动扣款。</li><li>如您变更支付渠道、解绑支付方式、切换客户端或删除账户，自动续费状态是否继续生效，以届时页面展示、支付渠道规则和平台实际支持能力为准。</li></ol><h1>退款与争议处理</h1><ol><li>自动续费属于连续性数字化服务。除法律法规另有规定、平台另有明确承诺，或存在未实际开通、未实际履行、重复扣费、错扣费、平台系统故障等情形外，已经生效或已经开始履行的当期服务原则上不支持无理由退款。</li><li>若您对自动续费扣款存在异议，应及时通过平台公示的客服或投诉渠道反馈，并提交账号信息、订单号、扣款截图及其他必要材料。平台将在核实后于合理期限内处理。</li><li>如争议涉及第三方支付渠道，您知悉平台可能需要与相关支付机构共同核查交易状态、退款路径和资金流向。</li></ol><h1>禁止行为与风险提示</h1><ol><li>您不得利用自动续费功能实施盗刷、套现、洗钱、异常套利、恶意拒付、虚假申诉、批量开通、支付作弊或其他违法违规行为。</li><li>对于存在前述高风险行为的账号，平台有权采取暂停扣款、冻结权益、限制功能、拒绝退款、关闭服务、保存证据并向有关主管部门报告等措施。</li><li>自动续费提醒、消息推送或短信通知可能受到设备设置、网络环境、通信服务商、邮箱过滤规则等因素影响。提醒送达失败不当然影响已明确授权的自动续费服务之效力。</li></ol><h1>联系我们</h1><p>如您对自动续费服务有任何疑问，可通过以下方式联系我们：</p><table><tr><td><p><strong>事项</strong></p></td><td><p><strong>联系方式</strong></p></td></tr><tr><td><p>主体名称</p></td><td><p>深圳润泽千川科技有限公司</p></td></tr><tr><td><p>客服邮箱</p></td><td><p>contact@rainzortech.com</p></td></tr><tr><td><p>投诉举报邮箱</p></td><td><p>service@rainzortech.com</p></td></tr><tr><td><p>联系地址</p></td><td><p>深圳市南山区南头街道大汪山社区桃园路8号田厦国际中心B座2002</p></td></tr><tr><td><p>工作时间</p></td><td><p>法定工作日 9:00 - 17:00</p></td></tr></table><p>平台有权根据法律法规变化、监管要求、业务调整、产品策略及风险控制需要，对本规则进行修订，并通过公告、弹窗、站内信、消息中心或其他合理方式通知您。</p>
+  </article>
+</main>
+<footer class="legal-foot">
+  <span>© HelloBot · 深圳润泽千川科技有限公司</span>
+  <span><a href="policies.html">查看全部政策 →</a></span>
+</footer>
+</body>
+</html>

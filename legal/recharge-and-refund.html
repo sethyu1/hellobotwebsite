@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#0B1020" />
+<title>充值、虚拟权益与退款规则 · HelloBot</title>
+<meta name="description" content="HelloBot — 充值、虚拟权益与退款规则" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Noto+Serif+SC:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles/system.css" />
+<style>
+  html, body { background: var(--bg-1); margin: 0; }
+  body { color: var(--ink-0); min-height: 100vh; }
+
+  .legal-top {
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(11,16,32,.85);
+    backdrop-filter: saturate(150%) blur(10px);
+    -webkit-backdrop-filter: saturate(150%) blur(10px);
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .legal-top-inner {
+    max-width: 880px; margin: 0 auto;
+    padding: 14px 24px;
+    display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  }
+  .legal-top a.brand {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-weight: 700; font-size: 16px; color: var(--ink-0);
+  }
+  .legal-top a.brand .dot {
+    width: 8px; height: 8px; border-radius: 50%; background: var(--brand);
+    display: inline-block;
+  }
+  .legal-top a.back {
+    color: var(--ink-2); font-size: 13px;
+    font-family: var(--font-mono); letter-spacing: .08em;
+  }
+  .legal-top a.back:hover { color: var(--brand); }
+
+  .legal-wrap {
+    max-width: 720px; margin: 0 auto;
+    padding: 56px 24px 96px;
+  }
+  .legal-wrap .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 11px; letter-spacing: .22em; text-transform: uppercase;
+    color: var(--ink-3);
+    margin-bottom: 14px;
+  }
+  .legal-wrap h1.doc-title {
+    font-size: 32px; line-height: 1.2; margin: 0 0 32px 0;
+    letter-spacing: -.01em; font-weight: 700;
+  }
+
+  /* Body content emitted by mammoth */
+  .legal-body {
+    color: var(--ink-1);
+    font-size: 15px; line-height: 1.85;
+  }
+  .legal-body p { margin: 0 0 14px 0; }
+  .legal-body strong { color: var(--ink-0); font-weight: 600; }
+  .legal-body em { color: var(--ink-0); }
+  .legal-body a { color: var(--brand); text-decoration: underline; text-underline-offset: 3px; }
+  .legal-body a:hover { color: var(--brand-hot); }
+
+  /* Mammoth maps Word's Heading 1/2/3 to <h1>/<h2>/<h3>. The first <p> is the
+     title block of the source doc; we leave it inline. */
+  .legal-body h1 {
+    font-size: 20px; line-height: 1.4; font-weight: 700;
+    color: var(--ink-0);
+    margin: 36px 0 14px 0;
+    letter-spacing: -.005em;
+  }
+  .legal-body h2 {
+    font-size: 17px; line-height: 1.4; font-weight: 600;
+    color: var(--ink-0);
+    margin: 28px 0 10px 0;
+  }
+  .legal-body h3 {
+    font-size: 15px; line-height: 1.5; font-weight: 600;
+    color: var(--ink-0);
+    margin: 22px 0 8px 0;
+  }
+
+  .legal-body ul, .legal-body ol {
+    padding-left: 22px; margin: 0 0 14px 0;
+  }
+  .legal-body li { margin: 0 0 6px 0; }
+
+  .legal-body table {
+    width: 100%; border-collapse: collapse;
+    margin: 16px 0; font-size: 13.5px;
+    border: 1px solid var(--line);
+    background: var(--bg-2);
+  }
+  .legal-body th, .legal-body td {
+    padding: 10px 12px;
+    border: 1px solid var(--line);
+    text-align: left; vertical-align: top;
+  }
+  .legal-body th { background: var(--bg-3); color: var(--ink-0); font-weight: 600; }
+  .legal-body td { color: var(--ink-1); }
+
+  .legal-foot {
+    max-width: 720px; margin: 0 auto;
+    padding: 24px 24px 64px;
+    border-top: 1px dashed var(--line-soft);
+    color: var(--ink-3); font-size: 12px;
+    font-family: var(--font-mono); letter-spacing: .04em;
+    display: flex; flex-wrap: wrap; gap: 8px 18px; justify-content: space-between;
+  }
+  .legal-foot a { color: var(--ink-3); }
+  .legal-foot a:hover { color: var(--brand); }
+
+  @media (max-width: 640px) {
+    .legal-wrap { padding: 40px 20px 72px; }
+    .legal-wrap h1.doc-title { font-size: 26px; }
+    .legal-body { font-size: 14.5px; }
+  }
+</style>
+</head>
+<body>
+<header class="legal-top">
+  <div class="legal-top-inner">
+    <a class="brand" href="../index.html"><span class="dot"></span> HelloBot</a>
+    <a class="back" href="../index.html">← 返回首页</a>
+  </div>
+</header>
+<main class="legal-wrap">
+  <div class="eyebrow">法律与政策</div>
+  <h1 class="doc-title">充值、虚拟权益与退款规则</h1>
+  <article class="legal-body">
+<p>深圳润泽千川科技有限公司<br />HelloBot / Bot招聘 充值、虚拟权益与退款规则</p><p>版本号：V1.0    更新日期：【2026年4月27日】    生效日期：【2026年4月27日】</p><p>重要提示：本规则适用于 HelloBot / Bot招聘产品中的充值、购买、持有、使用“钞能力”及其他虚拟权益、数字化服务额度、周期服务与相关退款处理。请您在购买前重点阅读虚拟权益的性质、使用边界、不可提现限制、退款条件、风控处置和“破产清算”规则。</p><h1>适用范围与基本原则</h1><ol><li>本规则适用于您在 HelloBot / Bot招聘产品中进行充值、购买、消耗、查询、管理和争议处理的全部虚拟权益及相关数字化服务。</li><li>本规则是《用户服务协议》的组成部分；与订单页、支付页、活动页、充值页、道具页、会员页、客服说明或其他页面规则不一致的，以对具体交易更明确、更具体的页面说明为准。</li><li>本产品仅向年满十八周岁的用户提供相关付费服务。未满十八周岁的用户不得充值、购买、订阅或使用相关付费能力。</li></ol><h1>虚拟权益的定义与法律属性</h1><ol><li>“钞能力”及平台内其他虚拟权益、服务额度、道具、数字化身份、周期权益、补充权益，仅为平台内部用于结算、记账、展示或兑换数字化服务的虚拟载体，不具有法定货币、金融产品、证券、存款、理财产品、预付卡法定替代物或可提现财产的法律属性。</li><li>前述虚拟权益仅可在平台内按照页面规则和服务说明使用，不得在平台外流通，不得回兑人民币或其他法币，不得进行场外交易、私下买卖、转让、借用、质押、继承、担保、套现或其他未经授权的流转行为。</li><li>除法律法规另有规定或平台页面另有明确说明外，虚拟权益不对应任何现实世界中的工资、薪酬、补偿金、财产权利或投资收益。</li></ol><h1>充值与购买规则</h1><ol><li>您可通过平台支持的支付渠道购买相应虚拟权益或数字化服务。具体充值档位、价格、折扣、赠送规则、支付方式和到账规则，以交易页面实时展示为准。</li><li>完成支付后，平台将在正常情况下按照页面规则向您的账号发放相应权益；若出现延迟到账、交易状态异常或支付结果未同步，请及时联系客服并提供必要订单信息。</li><li>您应确保支付来源合法、支付账户可用、交易行为真实，不得利用信用卡盗刷、洗钱、虚假支付、恶意退款、异常脚本、羊毛套利或其他违法违规方式获取虚拟权益。</li></ol><h1>虚拟权益的使用与扣减</h1><ol><li>虚拟权益的使用场景、扣减逻辑、有效期限和适用限制，以产品页面、活动说明和订单展示为准。平台可根据业务需要区分通用权益、活动赠送权益、订阅型权益、一次性权益、限时权益或其他不同类型权益。</li><li>不同来源、不同类型的虚拟权益可能存在不同的优先扣减顺序、有效期限、退款属性和使用限制。若页面未作特别说明，平台有权按照先到期先消耗、先赠送后充值或其他合理顺序进行扣减。</li><li>因角色设定和产品玩法需要，平台可能以“发工资”“周薪”“月薪”“补偿”“请喝咖啡”“请吃饭”“复合维生素静脉注射”等修辞化名称描述扣费、补充、续费或消耗逻辑；前述表述仅为平台内部数字化服务规则，不具有现实劳动报酬、医疗服务、经济补偿或其他现实法律关系含义。</li></ol><h1>退款规则</h1><ol><li>除法律法规另有规定、平台另有明确承诺或存在平台原因导致未实际开通、未实际履行、重复扣费、错扣费、系统故障等情形外，已充值成功、已发放到账、已实际消耗、已开始履行或已生效的数字化服务原则上不支持无理由退款。</li><li>活动赠送权益、补贴权益、补偿性发放权益、风控纠偏发放权益、体验权益或其他免费发放权益，原则上不支持折现、退款或转化为现金。</li><li>如您的退款请求经平台核实成立，退款将一般按照原支付路径退回；实际到账时间受支付渠道、银行、应用商店或第三方支付机构处理时效影响。</li><li>如您系通过 Apple App Store、Google Play、应用商店代扣或其他第三方商店渠道购买，退款受相应商店规则约束；平台将在合理范围内协助核查，但不对第三方渠道的退款审批结果承担保证责任。</li></ol><h1>“破产清算”、重置操作与权益处理</h1><ol><li>“破产清算”“重置公司”或类似命名的功能，仅为产品化经营玩法，不等同于现实法律意义上的破产、清算或注销。</li><li>用户主动触发“破产清算”或类似不可逆重置操作的，视为其自愿放弃当前产品空间中与公司经营、角色状态、部分互动关系、任务进度、活动资格及页面明确标注将随重置失效的虚拟权益和相关数据。</li><li>除法律法规另有规定或页面另有明确承诺外，因用户主动发起前述重置操作而导致的权益失效、配置丢失、资格消灭或历史数据删除，平台无需承担退款、补偿、赔偿或恢复责任。</li></ol><h1>风控、冻结与扣回</h1><ol><li>对于异常充值、异常退款、盗刷、拒付、虚假申诉、套现、洗钱、黑灰产活动、恶意套利、脚本作弊、账号买卖或其他违反法律法规、平台规则的行为，平台有权采取冻结账号、暂停服务、限制支付、扣回权益、取消活动资格、拒绝退款、关闭账号、追究损失等措施。</li><li>如平台基于风控、审计、监管要求或投诉举报发现您的权益取得存在重大异常，平台有权在核查期间暂时冻结相关权益或限制部分功能。</li><li>对于因技术错误、系统故障、活动配置异常、接口异常或其他非正常原因多发、错发、超发的虚拟权益，平台有权更正、撤回、扣回或限制使用。</li></ol><h1>用户义务与风险提示</h1><ol><li>请您妥善保管账号、验证码、支付密码、支付设备和身份凭证。因您保管不善、共用设备、轻信诈骗、点击钓鱼链接或泄露账号造成的损失，由您自行承担；法律法规另有规定或因平台故意、重大过失导致的除外。</li><li>虚拟权益可能受到账号状态、产品版本、活动政策、客户端限制、支付渠道规则、监管要求和平台风控措施影响。您应在购买前充分了解适用条件和限制。</li><li>平台不建议您以囤积、投机、代持、对赌或其他偏离正常消费目的的方式购买、持有或处置虚拟权益。</li></ol><h1>争议处理与联系我们</h1><p>如您对充值、到账、扣减、退款、冻结、扣回或其他虚拟权益事项存在疑问，可通过以下方式联系我们：</p><table><tr><td><p><strong>事项</strong></p></td><td><p><strong>联系方式</strong></p></td></tr><tr><td><p>主体名称</p></td><td><p>深圳润泽千川科技有限公司</p></td></tr><tr><td><p>客服邮箱</p></td><td><p>contact@rainzortech.com</p></td></tr><tr><td><p>投诉举报邮箱</p></td><td><p>service@rainzortech.com</p></td></tr><tr><td><p>联系地址</p></td><td><p>深圳市南山区南头街道大汪山社区桃园路8号田厦国际中心B座2002</p></td></tr><tr><td><p>工作时间</p></td><td><p>法定工作日 9:00 - 17:00</p></td></tr></table><p>平台有权根据法律法规变化、监管要求、交易规则、业务调整和风险控制需要，对本规则进行修订，并通过公告、弹窗、消息中心、站内信或其他合理方式通知您。</p>
+  </article>
+</main>
+<footer class="legal-foot">
+  <span>© HelloBot · 深圳润泽千川科技有限公司</span>
+  <span><a href="policies.html">查看全部政策 →</a></span>
+</footer>
+</body>
+</html>

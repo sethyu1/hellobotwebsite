@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#0B1020" />
+<title>第三方 SDK 与数据共享清单 · HelloBot</title>
+<meta name="description" content="HelloBot — 第三方 SDK 与数据共享清单" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Noto+Serif+SC:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles/system.css" />
+<style>
+  html, body { background: var(--bg-1); margin: 0; }
+  body { color: var(--ink-0); min-height: 100vh; }
+
+  .legal-top {
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(11,16,32,.85);
+    backdrop-filter: saturate(150%) blur(10px);
+    -webkit-backdrop-filter: saturate(150%) blur(10px);
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .legal-top-inner {
+    max-width: 880px; margin: 0 auto;
+    padding: 14px 24px;
+    display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  }
+  .legal-top a.brand {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-weight: 700; font-size: 16px; color: var(--ink-0);
+  }
+  .legal-top a.brand .dot {
+    width: 8px; height: 8px; border-radius: 50%; background: var(--brand);
+    display: inline-block;
+  }
+  .legal-top a.back {
+    color: var(--ink-2); font-size: 13px;
+    font-family: var(--font-mono); letter-spacing: .08em;
+  }
+  .legal-top a.back:hover { color: var(--brand); }
+
+  .legal-wrap {
+    max-width: 720px; margin: 0 auto;
+    padding: 56px 24px 96px;
+  }
+  .legal-wrap .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 11px; letter-spacing: .22em; text-transform: uppercase;
+    color: var(--ink-3);
+    margin-bottom: 14px;
+  }
+  .legal-wrap h1.doc-title {
+    font-size: 32px; line-height: 1.2; margin: 0 0 32px 0;
+    letter-spacing: -.01em; font-weight: 700;
+  }
+
+  /* Body content emitted by mammoth */
+  .legal-body {
+    color: var(--ink-1);
+    font-size: 15px; line-height: 1.85;
+  }
+  .legal-body p { margin: 0 0 14px 0; }
+  .legal-body strong { color: var(--ink-0); font-weight: 600; }
+  .legal-body em { color: var(--ink-0); }
+  .legal-body a { color: var(--brand); text-decoration: underline; text-underline-offset: 3px; }
+  .legal-body a:hover { color: var(--brand-hot); }
+
+  /* Mammoth maps Word's Heading 1/2/3 to <h1>/<h2>/<h3>. The first <p> is the
+     title block of the source doc; we leave it inline. */
+  .legal-body h1 {
+    font-size: 20px; line-height: 1.4; font-weight: 700;
+    color: var(--ink-0);
+    margin: 36px 0 14px 0;
+    letter-spacing: -.005em;
+  }
+  .legal-body h2 {
+    font-size: 17px; line-height: 1.4; font-weight: 600;
+    color: var(--ink-0);
+    margin: 28px 0 10px 0;
+  }
+  .legal-body h3 {
+    font-size: 15px; line-height: 1.5; font-weight: 600;
+    color: var(--ink-0);
+    margin: 22px 0 8px 0;
+  }
+
+  .legal-body ul, .legal-body ol {
+    padding-left: 22px; margin: 0 0 14px 0;
+  }
+  .legal-body li { margin: 0 0 6px 0; }
+
+  .legal-body table {
+    width: 100%; border-collapse: collapse;
+    margin: 16px 0; font-size: 13.5px;
+    border: 1px solid var(--line);
+    background: var(--bg-2);
+  }
+  .legal-body th, .legal-body td {
+    padding: 10px 12px;
+    border: 1px solid var(--line);
+    text-align: left; vertical-align: top;
+  }
+  .legal-body th { background: var(--bg-3); color: var(--ink-0); font-weight: 600; }
+  .legal-body td { color: var(--ink-1); }
+
+  .legal-foot {
+    max-width: 720px; margin: 0 auto;
+    padding: 24px 24px 64px;
+    border-top: 1px dashed var(--line-soft);
+    color: var(--ink-3); font-size: 12px;
+    font-family: var(--font-mono); letter-spacing: .04em;
+    display: flex; flex-wrap: wrap; gap: 8px 18px; justify-content: space-between;
+  }
+  .legal-foot a { color: var(--ink-3); }
+  .legal-foot a:hover { color: var(--brand); }
+
+  @media (max-width: 640px) {
+    .legal-wrap { padding: 40px 20px 72px; }
+    .legal-wrap h1.doc-title { font-size: 26px; }
+    .legal-body { font-size: 14.5px; }
+  }
+</style>
+</head>
+<body>
+<header class="legal-top">
+  <div class="legal-top-inner">
+    <a class="brand" href="../index.html"><span class="dot"></span> HelloBot</a>
+    <a class="back" href="../index.html">← 返回首页</a>
+  </div>
+</header>
+<main class="legal-wrap">
+  <div class="eyebrow">法律与政策</div>
+  <h1 class="doc-title">第三方 SDK 与数据共享清单</h1>
+  <article class="legal-body">
+<p><strong>HelloBot / Bot招聘<br />第三方 SDK / 个人信息共享清单（模板版）</strong></p><p>适用于：深圳润泽千川科技有限公司</p><table><tr><td><p>版本号</p></td><td><p>V1.0</p></td></tr><tr><td><p>更新日期</p></td><td><p>【2025年4月27日】</p></td></tr><tr><td><p>生效日期</p></td><td><p>【2025年4月27日】</p></td></tr><tr><td><p>适用产品</p></td><td><p>HelloBot / Bot招聘（中国区）</p></td></tr></table><h1>一、制定目的与适用范围</h1><p>为便于用户了解 HelloBot / Bot招聘在提供注册登录、消息推送、充值支付、聊天与文件上传、社区互动、客服工单、异常监测、AI 生成服务等功能过程中，可能涉及的第三方软件开发工具包（SDK）、第三方接口服务及个人信息共享、委托处理场景，特制定本清单。</p><p>本清单与《隐私政策》《儿童个人信息处理规则》配套使用，适用于网站、App、H5、小程序及其他相关客户端形态。若具体产品形态未接入某项能力，可不披露对应条目。</p><h1>二、披露原则</h1><ul><li>仅披露真实存在且已实际接入的第三方服务、SDK、接口或委托处理场景。</li><li>逐项说明第三方主体名称、处理目的、处理方式、个人信息种类、系统权限、调用场景、共享或委托处理属性，以及第三方隐私政策链接。</li><li>若第三方处理目的、方式、种类、权限或接收方发生变化，应同步更新本清单及相关隐私披露内容。</li><li>如第三方涉及未成年人个人信息、敏感个人信息、跨境传输或 AI 模型服务，应结合相应场景补充单独同意、专门规则或补充说明。</li></ul><h1>三、与产品功能的对应关系</h1><p>1. 手机号/邮箱注册登录、验证码发送、第三方账号绑定：微信 / Google / Apple。</p><p>2. 通知与消息中心：Push 通知、合同到期提醒、员工状态提醒、社区互动通知。</p><p>3. 聊天与文件上传：文字、图片、音频、文档上传，聊天记录搜索与导出。</p><p>4. 社区互动：评论、点赞、举报、分享。</p><p>5. 客服工单：读取账号联系方式、上传截图。</p><h1>四、第三方 SDK / 个人信息共享清单</h1><table><thead><tr><th><p><strong>序号</strong></p></th><th><p><strong>功能场景</strong></p></th><th><p><strong>第三方主体/SDK</strong></p></th><th><p><strong>处理目的</strong></p></th><th><p><strong>可能处理的信息</strong></p></th><th><p><strong>可能调用权限</strong></p></th><th><p><strong>处理方式</strong></p></th><th><p><strong>触发时机</strong></p></th><th><p><strong>隐私政策链接</strong></p></th><th><p><strong>备注</strong></p></th></tr></thead><tbody><tr><td><p>1</p></td><td><p>短信验证码登录/安全校验</p></td><td><p>阿里云</p></td><td><p>发送验证码、风控校验</p></td><td><p>手机号、验证码请求记录、设备信息、IP</p></td><td><p>无</p></td><td><p>委托处理</p></td><td><p>用户注册、登录、换绑手机号时</p></td><td><p>【链接】</p></td><td><p>必填；如中国区手机号注册启用则需披露</p></td></tr><tr><td><p>2</p></td><td><p>微信登录/绑定</p></td><td><p>腾讯相关登录能力 / 微信开放平台</p></td><td><p>第三方账号登录、绑定账号</p></td><td><p>OpenID/UnionID、昵称、头像、设备信息</p></td><td><p>无</p></td><td><p>共享 + 委托处理</p></td><td><p>用户主动选择微信登录或绑定时</p></td><td><p>【链接】</p></td><td><p>仅在实际接入时保留</p></td></tr><tr><td><p>3</p></td><td><p>Apple 登录/绑定</p></td><td><p>Apple Sign In</p></td><td><p>第三方账号登录、绑定账号</p></td><td><p>Apple 返回的账号标识、转发邮箱等</p></td><td><p>无</p></td><td><p>共享 + 委托处理</p></td><td><p>用户主动选择 Apple 登录时</p></td><td><p>【链接】</p></td><td><p>iOS 常见</p></td></tr><tr><td><p>4</p></td><td><p>Google 登录/绑定</p></td><td><p>Google Sign-In</p></td><td><p>第三方账号登录、绑定账号</p></td><td><p>Google 账号标识、昵称、头像、邮箱</p></td><td><p>无</p></td><td><p>共享 + 委托处理</p></td><td><p>用户主动选择 Google 登录时</p></td><td><p>【链接】</p></td><td><p>如中国区不上 Google，可删除</p></td></tr><tr><td><p>5</p></td><td><p>支付结算</p></td><td><p>微信支付/支付宝/iOS /Google Play/ Stripe</p></td><td><p>完成充值、订阅、对账、退款</p></td><td><p>订单号、金额、交易状态、支付确认信息</p></td><td><p>无</p></td><td><p>共享 + 委托处理</p></td><td><p>用户下单、支付、退款时</p></td><td><p>【链接】</p></td><td><p>需与支付页文案一致</p></td></tr><tr><td><p>6</p></td><td><p>消息推送</p></td><td><p>厂商推送 / APNs / FCM / 第三方推送</p></td><td><p>发送系统通知、合同提醒、社区互动提醒</p></td><td><p>设备标识、推送 token、消息触达状态</p></td><td><p>通知权限</p></td><td><p>委托处理</p></td><td><p>开启推送并触发消息通知时</p></td><td><p>【链接】</p></td><td><p>需区分 iOS/Android 厂商通道</p></td></tr><tr><td><p>7</p></td><td><p>对象存储 / CDN</p></td><td><p>阿里云</p></td><td><p>存储并分发图片、文档、音频、导出文件</p></td><td><p>上传文件、文件 URL、下载日志、设备信息</p></td><td><p>相册/存储/麦克风/相机（由客户端申请）</p></td><td><p>委托处理</p></td><td><p>用户上传、下载、导出文件时</p></td><td><p>【链接】</p></td><td><p>如自建可删除</p></td></tr><tr><td><p>8</p></td><td><p>文本内容安全审核</p></td><td><p>自主处理</p></td><td><p>识别违法违规、侵权、暴力、涉未成年人不宜内容</p></td><td><p>文本内容、账号标识、上下文片段</p></td><td><p>无</p></td><td><p>委托处理</p></td><td><p>聊天、评论、帖子、工单提交时</p></td><td><p>【链接】</p></td><td><p>AI/社区产品高风险项，建议披露</p></td></tr><tr><td><p>9</p></td><td><p>图片内容安全审核</p></td><td><p>自主处理</p></td><td><p>识别违规图片、涉黄涉暴、侵权、未成年人风险</p></td><td><p>图片文件、图片特征、账号标识</p></td><td><p>相册/相机（由客户端申请）</p></td><td><p>委托处理</p></td><td><p>用户上传头像、图片消息、帖子图片时</p></td><td><p>【链接】</p></td><td><p>如含 OCR/检测能力需同步说明</p></td></tr><tr><td><p>10</p></td><td><p>音频处理 / 语音转写</p></td><td><p>阿里云</p></td><td><p>语音识别、音频审核或转写</p></td><td><p>音频内容、文件元数据、账号标识</p></td><td><p>麦克风</p></td><td><p>委托处理</p></td><td><p>用户发送音频或系统转写时</p></td><td><p>【链接】</p></td><td><p>未接入则删除</p></td></tr><tr><td><p>11</p></td><td><p>客服工单/在线客服</p></td><td><p>自主处理</p></td><td><p>受理咨询、投诉举报、工单流转</p></td><td><p>联系方式、工单内容、截图、处理记录</p></td><td><p>相册/相机（由客户端申请）</p></td><td><p>委托处理</p></td><td><p>用户提交工单或联系客服时</p></td><td><p>【链接】</p></td><td><p>需与帮助中心入口一致</p></td></tr><tr><td><p>12</p></td><td><p>崩溃分析 / 性能监控</p></td><td><p>自主处理</p></td><td><p>发现闪退、卡顿、接口异常并修复</p></td><td><p>设备信息、应用版本、网络类型、错误日志</p></td><td><p>无</p></td><td><p>委托处理</p></td><td><p>发生闪退、异常时</p></td><td><p>【链接】</p></td><td><p>如未接入第三方可删除</p></td></tr><tr><td><p>13</p></td><td><p>统计分析</p></td><td><p>自主处理</p></td><td><p>统计功能使用情况、优化体验、防作弊</p></td><td><p>设备信息、操作日志、页面访问记录、账号标识</p></td><td><p>无</p></td><td><p>委托处理</p></td><td><p>用户使用产品功能时</p></td><td><p>【链接】</p></td><td><p>不得超范围采集</p></td></tr><tr><td><p>14</p></td><td><p>AI 模型 / 推理接口</p></td><td><p>阿里云</p></td><td><p>提供文本生成、推荐回复、内容理解等 AI 能力</p></td><td><p>用户输入内容、上下文片段、生成请求参数、账号标识</p></td><td><p>无</p></td><td><p>委托处理</p></td><td><p>用户与 Agent 互动、触发推荐回复时</p></td><td><p>【链接】</p></td><td><p>若数据用于模型训练需另行告知并取得相应同意</p></td></tr></tbody></table><h1>五、披露与接入要求</h1><ul><li>每接入一个第三方 SDK 或外部接口，产品、法务、研发和安全应同步完成用途确认、最小必要性评估、权限评估、个人信息影响评估（如适用）和上线前核验。</li><li>第三方实际收集的个人信息和权限调用行为，必须与隐私政策和本清单中的披露保持一致；不一致的，不得上线。</li><li>对涉及用户删除、撤回同意、注销账号等请求的第三方 SDK，运营者应建立同步通知和督促响应机制。</li><li>如某项服务涉及向其他个人信息处理者提供个人信息，应在隐私政策中同步披露接收方名称、联系方式、处理目的、处理方式和信息种类；依法需要时取得单独同意。</li><li>如某项服务涉及不满十四周岁未成年人个人信息、敏感个人信息、跨境传输、生物识别信息或 AI 生成内容标识，应增加专项规则或单独说明。</li></ul><h1>六、用户如何查阅本清单</h1><p>建议在 App 或网站的“设置—关于—法律文件”或“隐私政策—第三方信息共享清单”位置提供本清单入口，并保证用户能够便利、完整地查看和下载。</p><h1>七、联系方式</h1><p>如您对本清单有任何疑问，可通过下列方式联系我们：<br /></p><p>个人信息处理者名称：深圳润泽千川科技有限公司</p><p>联系地址：【深圳市南山区南头街道大汪山社区桃园路8号田厦国际中心B座2002】</p><p>客服邮箱：【contact@rainzortech.com】</p><p>投诉举报渠道：【service@rainzortech.com】</p><p>工作时间：【法定工作日 9：00 - 17：00】</p>
+  </article>
+</main>
+<footer class="legal-foot">
+  <span>© HelloBot · 深圳润泽千川科技有限公司</span>
+  <span><a href="policies.html">查看全部政策 →</a></span>
+</footer>
+</body>
+</html>

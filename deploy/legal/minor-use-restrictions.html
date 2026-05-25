@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#0B1020" />
+<title>未成年人保护规则 · HelloBot</title>
+<meta name="description" content="HelloBot — 未成年人保护规则" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Noto+Serif+SC:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles/system.css" />
+<style>
+  html, body { background: var(--bg-1); margin: 0; }
+  body { color: var(--ink-0); min-height: 100vh; }
+
+  .legal-top {
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(11,16,32,.85);
+    backdrop-filter: saturate(150%) blur(10px);
+    -webkit-backdrop-filter: saturate(150%) blur(10px);
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .legal-top-inner {
+    max-width: 880px; margin: 0 auto;
+    padding: 14px 24px;
+    display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  }
+  .legal-top a.brand {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-weight: 700; font-size: 16px; color: var(--ink-0);
+  }
+  .legal-top a.brand .dot {
+    width: 8px; height: 8px; border-radius: 50%; background: var(--brand);
+    display: inline-block;
+  }
+  .legal-top a.back {
+    color: var(--ink-2); font-size: 13px;
+    font-family: var(--font-mono); letter-spacing: .08em;
+  }
+  .legal-top a.back:hover { color: var(--brand); }
+
+  .legal-wrap {
+    max-width: 720px; margin: 0 auto;
+    padding: 56px 24px 96px;
+  }
+  .legal-wrap .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 11px; letter-spacing: .22em; text-transform: uppercase;
+    color: var(--ink-3);
+    margin-bottom: 14px;
+  }
+  .legal-wrap h1.doc-title {
+    font-size: 32px; line-height: 1.2; margin: 0 0 32px 0;
+    letter-spacing: -.01em; font-weight: 700;
+  }
+
+  /* Body content emitted by mammoth */
+  .legal-body {
+    color: var(--ink-1);
+    font-size: 15px; line-height: 1.85;
+  }
+  .legal-body p { margin: 0 0 14px 0; }
+  .legal-body strong { color: var(--ink-0); font-weight: 600; }
+  .legal-body em { color: var(--ink-0); }
+  .legal-body a { color: var(--brand); text-decoration: underline; text-underline-offset: 3px; }
+  .legal-body a:hover { color: var(--brand-hot); }
+
+  /* Mammoth maps Word's Heading 1/2/3 to <h1>/<h2>/<h3>. The first <p> is the
+     title block of the source doc; we leave it inline. */
+  .legal-body h1 {
+    font-size: 20px; line-height: 1.4; font-weight: 700;
+    color: var(--ink-0);
+    margin: 36px 0 14px 0;
+    letter-spacing: -.005em;
+  }
+  .legal-body h2 {
+    font-size: 17px; line-height: 1.4; font-weight: 600;
+    color: var(--ink-0);
+    margin: 28px 0 10px 0;
+  }
+  .legal-body h3 {
+    font-size: 15px; line-height: 1.5; font-weight: 600;
+    color: var(--ink-0);
+    margin: 22px 0 8px 0;
+  }
+
+  .legal-body ul, .legal-body ol {
+    padding-left: 22px; margin: 0 0 14px 0;
+  }
+  .legal-body li { margin: 0 0 6px 0; }
+
+  .legal-body table {
+    width: 100%; border-collapse: collapse;
+    margin: 16px 0; font-size: 13.5px;
+    border: 1px solid var(--line);
+    background: var(--bg-2);
+  }
+  .legal-body th, .legal-body td {
+    padding: 10px 12px;
+    border: 1px solid var(--line);
+    text-align: left; vertical-align: top;
+  }
+  .legal-body th { background: var(--bg-3); color: var(--ink-0); font-weight: 600; }
+  .legal-body td { color: var(--ink-1); }
+
+  .legal-foot {
+    max-width: 720px; margin: 0 auto;
+    padding: 24px 24px 64px;
+    border-top: 1px dashed var(--line-soft);
+    color: var(--ink-3); font-size: 12px;
+    font-family: var(--font-mono); letter-spacing: .04em;
+    display: flex; flex-wrap: wrap; gap: 8px 18px; justify-content: space-between;
+  }
+  .legal-foot a { color: var(--ink-3); }
+  .legal-foot a:hover { color: var(--brand); }
+
+  @media (max-width: 640px) {
+    .legal-wrap { padding: 40px 20px 72px; }
+    .legal-wrap h1.doc-title { font-size: 26px; }
+    .legal-body { font-size: 14.5px; }
+  }
+</style>
+</head>
+<body>
+<header class="legal-top">
+  <div class="legal-top-inner">
+    <a class="brand" href="../index.html"><span class="dot"></span> HelloBot</a>
+    <a class="back" href="../index.html">← 返回首页</a>
+  </div>
+</header>
+<main class="legal-wrap">
+  <div class="eyebrow">法律与政策</div>
+  <h1 class="doc-title">未成年人保护规则</h1>
+  <article class="legal-body">
+<p><strong>HelloBot / Bot招聘<br />未成年人使用限制与儿童个人信息处理规则</strong></p><p>适用于：深圳润泽千川科技有限公司<br />版本号：V1.1    更新日期：【2026年4月27日】    生效日期：【2026年4月27日】</p><p>说明：本产品仅面向年满十八周岁的用户提供注册、登录和使用服务，不向未满十八周岁的未成年人提供服务。考虑到未成年人可能绕过年龄限制接触、浏览、注册或使用本产品，且现行法律法规对不满十四周岁儿童个人信息保护有专门要求，特制定本规则。本规则与《隐私政策》《用户服务协议》配套适用。</p><p><strong>一、适用范围</strong></p><p>本规则适用于深圳润泽千川科技有限公司在运营 HelloBot / Bot招聘产品和服务过程中，对未满十八周岁未成年人相关信息的识别、核验、限制、删除、匿名化处理、投诉响应和保护措施；其中对不满十四周岁儿童个人信息的处理，适用更严格的保护标准。</p><p>如未成年人注册、登录、购买、使用本产品或向我们提供个人信息，未成年人的父母或者其他监护人应当及时与我们联系；我们将在核实后依法采取停止服务、限制功能、注销账号、删除或匿名化处理信息等措施。</p><p><strong>二、基本原则</strong></p><p>一经发现或有合理理由怀疑用户未满十八周岁，我们将以未成年人保护优先、停止服务优先、最小必要处理优先和依法删除优先为原则开展处置。</p><p>对不满十四周岁儿童个人信息，我们将按照敏感个人信息和儿童个人信息的更高标准采取保护措施。</p><p>除为年龄识别、身份核验、投诉处理、风险防控、删除处置、履行法定义务和配合监管要求所必需外，我们不会主动面向未成年人提供本产品服务。</p><p><strong>三、我们可能处理的信息及目的</strong></p><p>在发现或怀疑用户未满十八周岁时，我们可能处理与年龄识别、身份核验、账号状态、登录记录、设备信息、交易记录、投诉材料、监护人联系信息及其他与停止服务、删除处置、履行法定义务直接相关的信息。</p><p>如涉及不满十四周岁儿童个人信息或其他敏感个人信息，我们将在法律法规要求的范围内采取更严格的权限控制、安全保护和留存限制措施。</p><p><strong>四、我们如何使用相关信息</strong></p><p>前述信息仅用于识别和核验未成年人身份、限制或终止服务、处理监护人投诉、删除或匿名化处理相关个人信息、履行法定义务、配合监管要求、处理争议和保障网络与交易安全。</p><p>未经法定依据或监护人同意，我们不会将未成年人相关信息用于与前述目的无关的用途。</p><p>未经监护人单独同意，我们不会将儿童的对话记录、上传内容、生成结果或使用记录用于本产品之外的通用模型训练。</p><p><strong>五、共享、委托处理与公开披露</strong></p><p>我们不会向其他个人信息处理者出售未成年人相关个人信息。</p><p>如为完成年龄识别、身份核验、对象存储、安全审核、客服工单、异常监测、删除处置或其他合规处理而确需委托第三方处理相关信息，我们将仅在必要范围内进行，并通过合同等方式要求受托方采取严格保护措施。</p><p>如确需向其他个人信息处理者提供不满十四周岁儿童个人信息，我们将依法履行告知和单独同意等义务；法律法规另有规定的除外。</p><p>除法律法规另有规定或依法取得相应同意外，我们不会公开披露未成年人相关个人信息。</p><p><strong>六、保存期限与安全保护</strong></p><p>我们将在实现处理目的所必需的最短期限内保存未成年人相关信息；保存期限届满、处理目的已实现或不再必要时，将依法删除或匿名化处理。法律、行政法规另有规定的除外。</p><p>我们将采取更严格的访问控制、权限分级、加密传输、日志审计、异常监测和安全应急措施，防止信息泄露、篡改、毁损、滥用或未经授权访问。</p><p>如发生或可能发生未成年人相关个人信息安全事件，我们将依法及时采取补救措施，并按法律法规要求履行告知和报告义务。</p><p><strong>七、监护人的权利</strong></p><p>监护人有权查阅、复制、更正、补充、删除与被监护人有关的个人信息，并有权要求限制处理、注销账号、停止服务或关闭相关功能。</p><p>用户注销账号或监护人要求停止服务的，我们将在收到申请并完成必要核验后，于十五个工作日内完成相关处理，并删除或匿名化处理依法应删除的信息；法律、行政法规另有规定的除外。</p><p><strong>八、联系我们</strong></p><p>如您对本规则有任何疑问、意见或建议，或者需要行使与未成年人相关个人信息的权利，可通过以下方式联系我们：个人信息处理者：深圳润泽千川科技有限公司；联系地址：【深圳市南山区南头街道大汪山社区桃园路8号田厦国际中心B座2002】；客服邮箱：【contact@rainzortech.com】；投诉举报渠道：【service@rainzortech.com】；工作时间：【法定工作日 9：00 - 17：00】。</p>
+  </article>
+</main>
+<footer class="legal-foot">
+  <span>© HelloBot · 深圳润泽千川科技有限公司</span>
+  <span><a href="policies.html">查看全部政策 →</a></span>
+</footer>
+</body>
+</html>

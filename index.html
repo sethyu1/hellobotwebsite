@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#0B1020" />
+<title>HelloBot · 招聘 AI 员工的官方网站</title>
+<meta name="description" content="HelloBot — 像招聘一样雇佣 AI 员工。Hire AI employees the way you'd hire a person." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Noto+Serif+SC:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/system.css" />
+<style>
+  html, body { background: var(--bg-1); margin: 0; }
+  body { min-height: 100vh; }
+  /* mobile drawer animations (used by Nav) */
+  @keyframes hb-fade-in { from { opacity: 0 } to { opacity: 1 } }
+  @keyframes hb-slide-in { from { transform: translateX(100%) } to { transform: translateX(0) } }
+  /* Pre-mount loading state — visible only for the brief moment before the bundle parses */
+  #root:empty::before {
+    content: "Loading…";
+    position: fixed; inset: 0; display: grid; place-items: center;
+    color: rgba(245,247,251,.45);
+    font-family: "JetBrains Mono", ui-monospace, Menlo, monospace;
+    font-size: 12px; letter-spacing: .2em; text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<!-- React 18 (production builds) -->
+<script crossorigin src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+
+<!-- Pre-compiled bundle (esbuild). Run `npm run build` to regenerate. -->
+<script src="dist/bundle.js?v=1"></script>
+</body>
+</html>
