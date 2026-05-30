@@ -224,8 +224,11 @@ function Nav({ onLogoClick }) {
               }}>EN</button>
             </div>
           )}
-          {/* Sticky CTA — primary action, always visible */}
-          <button onClick={() => go("employees")} className="btn btn-primary btn-sm">{t("nav.cta")} →</button>
+          {/* Sticky CTA — primary action, always visible. Routes to the
+              Tally waitlist form (https://tally.so/r/LZkX41) — see also
+              the matching mobile-drawer button and the two hero CTAs in
+              home.jsx. Keep all four in sync if the form URL changes. */}
+          <button onClick={() => window.open("https://tally.so/r/LZkX41", "_blank", "noopener,noreferrer")} className="btn btn-primary btn-sm">{t("nav.cta")} →</button>
           {/* Mobile-only: compact lang toggle (tap to flip to the other language) */}
           {mobile && (
             <button
@@ -319,7 +322,7 @@ function Nav({ onLogoClick }) {
                   color: lang === "en" ? "var(--brand-ink)" : "var(--ink-2)", fontWeight: 600,
                 }}>EN</button>
               </div>
-              <button onClick={() => navTo("employees")} className="btn btn-primary" style={{ width: "100%", justifyContent: "center" }}>
+              <button onClick={() => window.open("https://tally.so/r/LZkX41", "_blank", "noopener,noreferrer")} className="btn btn-primary" style={{ width: "100%", justifyContent: "center" }}>
                 {t("nav.cta")} →
               </button>
             </div>

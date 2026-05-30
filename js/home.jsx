@@ -68,7 +68,7 @@ function Hero({ variant }) {
           </p>
 
           <div style={{ display: "flex", gap: 12, marginTop: 28, flexWrap: "wrap" }}>
-            <button onClick={() => go("employees")} className="btn btn-primary">{t("common.tryNow")} →</button>
+            <button onClick={() => window.open("https://tally.so/r/LZkX41", "_blank", "noopener,noreferrer")} className="btn btn-primary">{t("common.tryNow")} →</button>
             <button onClick={() => go("employees")} className="btn btn-ghost">{t("common.viewEmployees")}</button>
           </div>
 
@@ -523,8 +523,8 @@ function FinalCTA() {
           <h2 className="h-section" style={{ color: "var(--ink-paper)", marginTop: 14, maxWidth: 640 }}>{t("home.finalCta.title")}</h2>
           <p style={{ color: "var(--ink-paper-2)", marginTop: 14, fontSize: 17, lineHeight: 1.6, maxWidth: 560 }}>{t("home.finalCta.sub")}</p>
           <div style={{ display: "flex", gap: 12, marginTop: 28, flexWrap: "wrap" }}>
-            <button onClick={() => go("employees")} className="btn btn-paper">{t("common.tryNow")} →</button>
-            <button onClick={() => go("about")} className="btn" style={{ background: "transparent", color: "var(--ink-paper)", border: "1px solid var(--ink-paper)" }}>{t("common.joinWaitlist")}</button>
+            <button onClick={() => window.open("https://tally.so/r/LZkX41", "_blank", "noopener,noreferrer")} className="btn btn-paper">{t("common.tryNow")} →</button>
+            <button onClick={() => window.open("https://tally.so/r/LZkX41", "_blank", "noopener,noreferrer")} className="btn" style={{ background: "transparent", color: "var(--ink-paper)", border: "1px solid var(--ink-paper)" }}>{t("common.joinWaitlist")}</button>
           </div>
         </div>
       </div>
